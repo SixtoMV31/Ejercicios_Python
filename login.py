@@ -8,7 +8,7 @@ for intentos in range (intentos_maximos):
     if usuario_ing==usuario and contra_ingre==contrasena:
         print("Bienvenido al programa")
         break
-    elif usuario_ing!=usuario:
-        print("usuario incorrecto")
-    elif contra_ingre!=contrasena:
-        print("contraseña incorrecta")
+    elif usuario_ing!=usuario or contra_ingre!=contrasena:
+        int_restantes=intentos_maximos-(intentos+1)
+        print("usuario o contraseña incorrecta " \
+        f"te quedan {int_restantes} intentos")
